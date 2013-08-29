@@ -29,7 +29,20 @@ class MytestController extends AbstractActionController {
     $r->headMeta()->appendName('dc.description', $this->description)->setIndent(8);
     
     return new ViewModel();
-    
   }
+
+    public function testAction() {
+        $r = $this->getServiceLocator()->get('Zend\View\Renderer\PhpRenderer');
+        $r->headTitle($this->title);
+        $r->headMeta()->appendName('keywords', $this->keyword)->setIndent(8);
+        $r->headMeta()->appendName('description', $this->description)->setIndent(8);
+        $r->headMeta()->appendName('Language', 'en')->setIndent(8);
+        $r->headMeta()->appendName('dc.title', $this->title)->setIndent(8);
+        $r->headMeta()->appendName('dc.keywords', $this->keyword)->setIndent(8);
+        $r->headMeta()->appendName('dc.description', $this->description)->setIndent(8);
+
+        return new ViewModel();
+
+    }
 
 }

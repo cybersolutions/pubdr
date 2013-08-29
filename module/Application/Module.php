@@ -23,6 +23,15 @@ class Module {
 	  ),
 	));
 	$router->addRoute('thisismytest', $route, null);
+
+  $route = Http\Literal::factory(array(
+      'route' => '/test',
+      'defaults' => array(
+          'controller' => 'Application\Controller\Mytest',
+          'action' => 'test'
+      ),
+  ));
+  $router->addRoute('test', $route, null);
 	
 	
   }
