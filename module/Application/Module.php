@@ -14,15 +14,17 @@ class Module {
     $moduleRouteListener->attach($eventManager);
     $router = $e->getApplication()->getServiceManager()->get('router'); 
     
-	// $route = Http\Segment::factory(array(
-      // 'route' => '/login[/:action]',
-      // 'defaults' => array(
-        // 'controller' => 'Application\Controller\Login',
-        // 'action' => 'index'
-      // ),
-    // ));
-    // $router->addRoute('login', $route, null);
-    
+	// test accounts
+	$route = Http\Literal::factory(array(
+	  'route' => '/this-is-my-test',
+	  'defaults' => array(
+		'controller' => 'Application\Controller\Mytest',
+		'action' => 'index'
+	  ),
+	));
+	$router->addRoute('thisismytest', $route, null);
+	
+	
   }
   
   public function getConfig() {

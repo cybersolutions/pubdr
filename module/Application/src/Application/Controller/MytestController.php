@@ -1,11 +1,10 @@
 <?php
-
 namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Session\Container;
 
-class IndexController extends AbstractActionController {
+class MytestController extends AbstractActionController {
   
   private $title = "";
   private $keyword = "";
